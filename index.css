@@ -1,0 +1,64 @@
+header {
+    background-color: #333; /* Dark background for the header */
+    color: white; /* White text color */
+    padding: 10px; /* Padding around the header */
+    text-align: center; /* Centered  text */
+    font-size: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px; /* Rounded corners for the header */
+  }
+  img {
+    width: 200px; /* Fixed width for images */
+    height: 200px; /* Auto height to maintain aspect ratio */
+    margin: 10px; /* Margin around images */
+  }
+  .gallery-header {
+    text-align: center; /* Centered text */
+    font-size: 24px; /* Font size for the header */
+    margin-top: 60px; /* Margin to avoid overlap with fixed header */
+    margin-bottom: 20px; /* Margin below the header */
+  }
+  .navbar {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Center the navbar items */
+    background-color: #f4f4f4(20, 20, 20);
+    gap: 500px; /* Space between rows */
+    text-decoration: none;
+  }
+  .navbar a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Text color for links */
+    padding: 10px; /* Padding around links */
+    font-size: 18px; /* Font size for links */
+    border-radius: 5px; /* Rounded corners for links */
+  }
+  body {
+    background-color: black;
+  }
+  .container {
+    margin: 50px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 50px 50px blue;
+    background-image: url("./Images/Image 1.jpg");
+  }
+  section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  footer {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  p {
+    color: red;
+  }
+  h2 {
+    color: white;
+  }
+  h1 {
+    color: white;
+  }
+  
