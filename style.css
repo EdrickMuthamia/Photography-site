@@ -1,0 +1,346 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Example font */
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark gray text */
+    padding: 20px;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    overflow: auto; /* Clear floats if any */
+    padding: 0 20px;
+}
+
+header {
+    background: #333; /* Dark background for header */
+    color: #fff; /* White text for header */
+    padding: 1rem 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+}
+
+section {
+    background: #fff; /* White background for sections */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    color: #333; /* Dark color for section headings */
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+section h3 {
+    margin-bottom: 0.75rem;
+    color: #555;
+}
+
+ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+a {
+    color: #3498db; /* Accent color for links */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2980b9; /* Darker accent on hover */
+    text-decoration: underline;
+}
+
+#contact p {
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 0 10px;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+    section {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    header p {
+        font-size: 0.9rem;
+    }
+    section h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Navigation Styles */
+nav {
+    background: #444; /* Slightly lighter than header */
+    padding: 0.5rem 0;
+    margin-bottom: 1rem; /* Space between nav and title */
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active { /* Optional: for active link styling */
+    background-color: #555;
+    border-radius: 3px;
+}
+
+/* Expandable Text Section Styles */
+.expandable-content-area {
+    max-height: 60px; /* Adjust as needed - approx 2-3 lines */
+    overflow: hidden;
+    transition: max-height 0.5s ease-out; /* Smooth transition */
+    position: relative; /* For potential gradient overlay if text is cut off */
+}
+
+.expandable-content-area.expanded {
+    max-height: 1000px; /* A large enough value to show all content */
+}
+
+/* Optional: Add a gradient fade-out effect if text is cut abruptly */
+.expandable-content-area:not(.expanded)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(to bottom, transparent, #fff); /* Matches section background */
+}
+
+.toggle-expand-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease; /* Add this */
+}
+
+.toggle-expand-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Project Article Hover Effects */
+section#projects article {
+    background-color: #f9f9f9; /* Slightly different background for project articles */
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Add transition */
+}
+
+section#projects article:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-5px); /* Make it "lift" slightly */
+}
+
+section#projects article h3 {
+    margin-bottom: 0.5rem; /* Adjust spacing if needed */
+}
+
+/* Project Image Styling */
+.project-image {
+    width: 100%; /* Make image responsive within its container */
+    max-width: 600px; /* Optional: Set a max-width for very large containers */
+    height: auto;   /* Maintain aspect ratio */
+    border-radius: 4px;
+    margin-bottom: 15px;
+    display: block; /* To enable margin auto if needed, and consistent layout */
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer; /* Indicates it will be clickable for lightbox */
+    border: 1px solid #ddd; /* Optional: simple border */
+}
+
+/* Modal Base */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    padding-top: 60px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px; /* Max width of the image */
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+/* Animation for Zooming in the image */
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close-modal-btn {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close-modal-btn:hover,
+.close-modal-btn:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Caption (Image Text) */
+.modal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px; /* Or auto */
+}
+
+/* Responsive adjustments for modal content */
+@media (max-width: 700px) {
+    .modal-content {
+        width: 95%;
+    }
+}
+
+/* Contact Form Styles */
+#contactForm div {
+    margin-bottom: 15px;
+}
+
+#contactForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* So padding doesn't add to width */
+}
+
+#contactForm textarea {
+    resize: vertical; /* Allow vertical resize, not horizontal */
+}
+
+.submit-btn { /* Re-using or extending .toggle-expand-btn styles if desired */
+    background-color: #28a745; /* Green for send */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+.error-message {
+    display: block; /* Show on new line */
+    color: red;
+    font-size: 0.8em;
+    margin-top: 3px;
+}
+#formStatus {
+    font-weight: bold;
+}
+#formStatus.success {
+    color: green;
+}
+#formStatus.error {
+    color: red;
+}
