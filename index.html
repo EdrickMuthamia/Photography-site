@@ -3,39 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collection of Memories </title> <link rel="stylesheet" href="./index.css">
-    
+    <title>Edrick Muthamia - Full Stack Software Engineer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body><div class ="container">
+<body>
+    <div class="container">
     <header>
-        <h1>My Photography Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Edrick Muthamia</h1>
+        <p>Full Stack Software Engineer</p>
+        <p>Nairobi, Kenya | Student at Moringa School</p>
     </header>
-    <nav class="navbar">
-        <div> <a href="#home">Home</a> </div>
-        <div><a href="#gallery">Gallery</a></div>
-        <div><a href="#contact">Contact</a></div>
-    </nav>
-    <section>
-        <div class="gallery-header">
-            <h2>My Favorite Shots</h2>
-            <p>Explore my collection of memories captured through the lens.</p>
-        </div>    
-        <div class="gallery-images">
-        <img src="./Images/Image 1.jpg" alt="Sample Photo 1">
-        <img src="./Images/Image 2.jpg" alt="Sample Photo 2">
-        <img src="./Images/Image 3 .jpg" alt="Sample Photo 3">
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>My name is Edrick Muthamia, a driven and curious Full Stack Software Engineering student based in Nairobi, Kenya. I’m currently studying at Moringa School, where I specialize in both front-end and back-end development.</p>
+        <p>My tech journey began with a fascination for how websites and apps work, and has grown into a full-blown passion for software engineering. I enjoy creating web applications that are not only functional but also clean and responsive. I strongly believe in continuous learning, teamwork, and building tools that can have a positive impact.</p>
+        <p>One of my proudest projects so far is a Personal Budget Tracker—a web application designed to help users manage their finances by tracking income and expenses. While it's still in the final stages, the project showcases my ability to combine technical skill with practical problem-solving.</p>
+
+        <h3>Career Summary</h3>
+        <p>I am a passionate and dedicated Full Stack Software Engineering student at Moringa School with a focus on both front-end and back-end development. I enjoy solving real-world problems using code and aim to build efficient, user-friendly applications that create real value.</p>
+
+        <div class="expandable-text-wrapper">
+            <h3>Future Goals</h3>
+            <div class="expandable-content-area" id="future-goals-text">
+                <p>My future goal is to become a full-stack developer who not only writes great code but also mentors others, contributes to open-source projects, and uses tech to solve meaningful problems in my community. Outside of programming, I enjoy exploring new technologies, reading tutorials, and learning about trends in the software world. I believe tech is one of the most powerful tools for change, and I'm excited to be part of that movement.</p>
+            </div>
+            <button type="button" class="toggle-expand-btn" aria-expanded="false" aria-controls="future-goals-text">Read More</button>
         </div>
     </section>
-    <section>
-        <h2>About us</h2>
-<p>Welcome to Fovorite shot site, a visual haven crafted to celebrate the art of photography and storytelling. This website was born from a passion for capturing life's fleeting moments the kind that tell stories, evoke emotions, and inspire creativity. Each photograph showcased here is not just an image but a journey, a memory frozen in time.
-</p>
-<p>Our mission is to share the beauty of the world through our lens, inviting you to experience the magic of photography. Whether you're a fellow photographer, an art enthusiast, or simply someone who appreciates the beauty of life, we hope you find inspiration and joy in our collection.</p>
-<p>Join us on this visual journey, where every click of the shutter tells a story waiting to be discovered. Thank you for being a part of our photography adventure!</p>
-     </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <article>
+            <h3>Personal Budget Tracker</h3>
+           <img src="https://via.placeholder.com/600x400.png?text=Project+Screenshot" alt="Screenshot of Personal Budget Tracker" class="project-image">
+            <p>A web app that allows users to manage their income, expenses, and budgeting goals in one place.</p>
+            <p><strong>Status:</strong> Final touches in progress</p>
+            <p>
+                <strong>GitHub:</strong>
+                <a href="https://github.com/edrickmuthamia/YOUR_PROJECT_REPO_NAME_HERE" target="_blank">View Project Repository</a>
+                <!-- TODO: Update this link with your actual project repository URL -->
+            </p>
+        </article>
+        <!-- Add more projects here as needed -->
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <h3>Front-End:</h3>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <h3>Back-End:</h3>
+        <ul>
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <!-- Add more back-end skills as you acquire them -->
+        </ul>
+        <h3>Tools:</h3>
+        <ul>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>VS Code</li>
+            <li>Chrome DevTools</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p><strong>Email:</strong> <a href="mailto:edrickmuthamia05@gmail.com">edrickmuthamia05@gmail.com</a></p>
+        <p><strong>Phone:</strong> 0117045920</p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/edrickmuthamia" target="_blank">github.com/edrickmuthamia</a></p>
+
+        <h3>Send me a message</h3>
+        <form id="contactForm" novalidate>
+            <div>
+                <label for="formName">Name:</label>
+                <input type="text" id="formName" name="name" required>
+                <span class="error-message" id="nameError"></span>
+            </div>
+            <div>
+                <label for="formEmail">Email:</label>
+                <input type="email" id="formEmail" name="email" required>
+                <span class="error-message" id="emailError"></span>
+            </div>
+            <div>
+                <label for="formMessage">Message:</label>
+                <textarea id="formMessage" name="message" rows="5" required></textarea>
+                <span class="error-message" id="messageError"></span>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+            <p id="formStatus" style="margin-top:10px;"></p>
+            <p style="font-size: 0.8em; margin-top: 15px;"><em>Note: This form is for demonstration purposes and does not currently send emails.</em></p>
+        </form>
+    </section>
+
     <footer>
-        <p>&copy; 2025 My Photography Portfolio. All rights reserved.</p>
+        <p>&copy; 2024 Edrick Muthamia. All rights reserved.</p>
     </footer>
-</div>
+    </div> <!-- end .container -->
+
+    <!-- The Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal-btn">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption" class="modal-caption"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
